@@ -11,6 +11,17 @@ import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+
+var config = {
+  apiKey: "AIzaSyArF05IAQhtdmW_Nd-whJF0Tv9pildXghg",
+    authDomain: "rand-fuel.firebaseapp.com",
+    projectId: "rand-fuel",
+    storageBucket: "rand-fuel.appspot.com",
+    messagingSenderId: "936487571866",
+    appId: "1:936487571866:web:e982cabc3b02a6f7756a23"
+};
 
 @NgModule({
   declarations: [
@@ -26,7 +37,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FlexLayoutModule,
     FormsModule, 
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],
