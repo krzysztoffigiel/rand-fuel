@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faLightbulb, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-log-in',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-in.component.scss']
 })
 export class LogInComponent implements OnInit {
+
+  // Font Awesome icons
+  faLightbulb = faLightbulb;
+  faSignInAlt = faSignInAlt;
 
   constructor() { }
 

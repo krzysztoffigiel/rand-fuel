@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faGasPump, faSignInAlt, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rand-fuel-app';
+
+  // Font Awesome icons
+  faGasPump = faGasPump;
+  faSignInAlt = faSignInAlt; 
+  faUserPlus = faUserPlus;
+
 }
