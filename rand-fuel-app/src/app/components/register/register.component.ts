@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faLightbulb, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from "../../auth/auth.service";
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,7 @@ export class RegisterComponent implements OnInit {
   faLightbulb = faLightbulb;
   faUserPlus = faUserPlus;
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
   }

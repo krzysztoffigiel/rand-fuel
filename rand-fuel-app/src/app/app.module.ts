@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 
@@ -15,23 +16,15 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-
-var config = {
-  apiKey: "AIzaSyArF05IAQhtdmW_Nd-whJF0Tv9pildXghg",
-    authDomain: "rand-fuel.firebaseapp.com",
-    projectId: "rand-fuel",
-    storageBucket: "rand-fuel.appspot.com",
-    messagingSenderId: "936487571866",
-    appId: "1:936487571866:web:e982cabc3b02a6f7756a23"
-};
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     LogInComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +35,7 @@ var config = {
     FormsModule, 
     ReactiveFormsModule,
     FontAwesomeModule,
-    AngularFireModule.initializeApp(config),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
   ],
   providers: [],
